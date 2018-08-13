@@ -1,0 +1,11 @@
+<h1>{{ title }}</h1>
+
+<div>
+  <label> CEP:
+    <input #CEP (keyup.enter) = "getAddress(CEP.value)">
+  </label>
+</div>
+
+<agm-map [latitude]="lat" [longitude]="lng" [zoom] = 15>
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
